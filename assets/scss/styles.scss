@@ -1,0 +1,285 @@
+@import 'font-face';
+@import 'variables';
+@import 'media';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $montserrat;
+	font-weight: $regular;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+a {
+	display: block;
+}
+
+h1 {
+	font-size: 25px;
+	font-weight: $regular;
+
+	@include media(lg-min) {
+		font-size: 36px;
+	}
+}
+
+p {
+	font-size: 14px;
+	font-weight: $regular;
+	margin: 20px 0 30px;
+
+	@include media(lg-min) {
+		font-size: 24px;
+	}
+}
+
+button {
+	width: 100%;
+	border: 0;
+	font-family: $montserrat;
+	padding: 8px;
+	font-size: 14px;
+	max-width: 190px;
+	cursor: pointer;
+	
+	@include media(lg-min) {
+		font-size: 24px;
+		max-width: 245px;
+	}
+}
+
+.button-light {
+	background: $white;
+	color: $black;
+	transition: all 300ms ease-in-out;
+	
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 1px 12px 36px -11px #000000;
+	}
+}
+
+.cover-img {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.slick-dots {
+	bottom: 20px;
+
+	li {
+		width: 15px;
+		height: 15px;
+		margin: 0 10px;
+
+		button {
+			background-color: rgba(255, 255, 255, 0.20);
+			border-radius: 50px;
+			width: 100%;
+			height: 100%;
+
+			&::before {
+				content: '';
+			}
+		}
+	}
+	.slick-active {
+		button {
+			background: $white;
+		}
+	}
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	padding: 10px 0;
+
+	@include media(lg-min) {
+		padding: 20px 0;
+	}
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.container-logo {
+			width: 100%;
+			max-width: 130px;
+			
+			@include media(lg-min) {
+				max-width: 175px;
+			}
+		}
+
+		.wrapper-menu {
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+			z-index: 10;
+
+			.menu {
+				position: relative;
+				width: 45px;
+				height: 26px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				span {
+					width: 100%;
+					height: 4px;
+					background-color: $white;
+					position: absolute;
+					display: block;
+					opacity: 1;
+					transition: 250ms ease-in-out;
+				}
+			}
+
+			.menu span:nth-child(1) {
+				top: 0;
+			}
+
+			.menu span:nth-child(2),
+			.menu span:nth-child(3) {
+				top:12px;
+			}
+
+			.menu span:nth-child(4) {
+				top: 24px;
+			}
+
+			.menu.open span:nth-child(1),
+			.menu.open span:nth-child(4) {
+				top: 10px;
+				opacity: 0;
+				width: 0%;
+			}
+
+			.menu.open span:nth-child(2) {
+				transform: rotate(45deg);
+			}
+
+			.menu.open span:nth-child(3) {
+				transform: rotate(-45deg);
+			}
+			
+		}
+
+		.bg-nav {
+			background-color: rgba(0, 0, 0, 0.83);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			display: none;
+			padding-top: 90px;
+			padding-bottom: 20px;
+			z-index: 1;
+
+			// @include media(lg-min) {
+			// 	position: static;
+			// 	width: auto;
+			// 	display: block !important;
+			// 	background-color: transparent;
+			// 	padding-top: 0;
+			// 	padding-bottom: 0;
+			// }
+
+			.container {
+				// @include media(lg-min) {
+				// 	padding: 0;
+				// }
+
+				ul {
+					list-style: none;
+					text-align: center;
+
+					// @include media(lg-min) {
+					// 	margin: 0;
+					// 	border: 0;
+					// 	border-radius: 0;
+					// 	display: flex;
+					// 	flex-direction: row;
+					// }
+
+					li {
+						// @include media(lg-min) {
+						// 	margin-left: 50px;
+						// }
+
+						a {
+							text-align: center;
+							font-size: 14px;
+							padding: 15px 0;
+							cursor: pointer;
+							position: relative;
+							width: auto;
+							font-weight: $regular;
+							color: $white;
+							transition: all 150ms ease-in-out;
+							text-decoration: none;
+
+							@include media(lg-min) {
+								padding: 20px 0;
+								font-size: 24px;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+.hero-page {
+	.single-item {
+		.hero-slide {
+			position: relative;
+			display: flex;
+			height: 100vh;
+
+			@include media(lg-min) {
+				height: auto;
+				min-height: 800px;
+			}
+
+			.overlay {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.20);
+			}
+
+			.container {
+				display: flex;
+				align-self: flex-end;
+
+				.wrapper {
+					width: 100%;
+					z-index: 4;
+					position: relative;
+					margin-bottom: 120px;
+
+					h1, p {
+						color: $white;
+					}
+				}
+			}
+
+		}
+	}
+}
