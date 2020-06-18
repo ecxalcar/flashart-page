@@ -11,7 +11,7 @@ $(document).ready(function(){
 		arrows: false,
 		dots: true,
 		infinite: true,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 2000,
 	});
 });
