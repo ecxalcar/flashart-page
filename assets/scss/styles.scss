@@ -304,10 +304,13 @@ header {
 	.container-collection {
 		.prev-video {
 			width: 100%;
-			min-height: 330px;
-			height: 100%;
-			max-height: 330px;
+			height: 260px;
 			margin-bottom: 30px;
+			box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+
+			@include media(xl-min) {
+				height: 330px;
+			}
 
 			iframe {
 				width: 100%;
@@ -356,15 +359,65 @@ header {
 #fashion-photography {
 	.container-inner {
 		.prev-video {
+			width: 100%;
+			height: 260px;
+			margin-bottom: 30px;
+			box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+
+			@include media(md-min) {
+				height: 400px;
+			}
+
+			@include media(lg-min) {
+				height: 600px;
+			}
+
+			@include media(xxl-min) {
+				height: 700px;
+			}
+
 			iframe {
 				width: 100%;
 				height: 100%;
-				min-height: 330px;
 				display: block;
+			}
+		}
+	}
+}
 
-				@include media(lg-min) {
-					min-height: 700px;
-				}
+#awesome-features {
+	background-color: #F6F6F6;
+
+	.pictures-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		.single-picture {
+			height: 100%;
+			max-height: 320px;
+			width: calc(100% / 1);
+			max-width: 240px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 30px;
+			
+			@include media(sm-min) {
+				width: calc((100% / 2) - 30px);
+			}
+			@include media(md-min) {
+				
+				width: calc((100% / 3) - 30px);
+			}
+			@include media(lg-min) {
+				width: calc( (100% / 5) - 30px);
+			}
+
+			div {
+				height: 320px;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
 			}
 		}
 	}

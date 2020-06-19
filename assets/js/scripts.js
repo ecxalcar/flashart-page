@@ -14,4 +14,11 @@ $(document).ready(function(){
 		autoplay: false,
 		autoplaySpeed: 2000,
 	});
+
+	$('body').flipLightBox({
+			
+		lightbox_text_status: 0,
+		lightbox_navigation_status: 0
+		
+	});
 });
