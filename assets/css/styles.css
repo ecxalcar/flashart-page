@@ -146,7 +146,7 @@ section a {
 header {
   position: fixed;
   width: 100%;
-  z-index: 5;
+  z-index: 20;
   padding: 10px 0;
 }
 
@@ -170,30 +170,44 @@ header .wrapper {
 
 header .wrapper .container-logo {
   width: 100%;
-  max-width: 130px;
+  max-width: 115px;
 }
 
 @media screen and (min-width: 992px) {
   header .wrapper .container-logo {
-    max-width: 175px;
+    max-width: 145px;
   }
 }
 
 header .wrapper .wrapper-menu {
-  width: 50px;
-  height: 50px;
   cursor: pointer;
   z-index: 10;
+  height: 30px;
+  width: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  header .wrapper .wrapper-menu {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 header .wrapper .wrapper-menu .menu {
   position: relative;
-  width: 45px;
-  height: 26px;
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 992px) {
+  header .wrapper .wrapper-menu .menu {
+    width: 45px;
+    height: 26px;
+  }
 }
 
 header .wrapper .wrapper-menu .menu span {
@@ -542,5 +556,136 @@ header .wrapper .bg-nav .container ul li a {
 
 #instagram-feed .content-inner {
   color: #fff;
+}
+
+footer {
+  padding: 50px 0;
+}
+
+footer .content-inner .container-logo {
+  width: 100%;
+  max-width: 115px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 992px) {
+  footer .content-inner .container-logo {
+    max-width: 145px;
+  }
+}
+
+footer .content-inner nav {
+  margin: 30px 0;
+}
+
+footer .content-inner nav ul {
+  margin: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 992px) {
+  footer .content-inner nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+footer .content-inner nav ul li a {
+  text-decoration: none;
+  line-height: 25px;
+  font-size: 12px;
+  color: #8B8B8B;
+}
+
+footer .content-inner nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .content-inner .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer .content-inner .social-media .single-icon {
+  font-size: 22px;
+  color: #fff;
+  background-color: red;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 5px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+footer .content-inner .social-media .single-icon:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 1px 12px 36px -11px #000000;
+          box-shadow: 1px 12px 36px -11px #000000;
+}
+
+@media screen and (min-width: 992px) {
+  footer .content-inner .social-media .single-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 27px;
+  }
+}
+
+footer .content-inner .social-media .single-icon a {
+  color: #fff;
+}
+
+footer .content-inner .social-media .facebook {
+  background-color: #3B5998;
+}
+
+footer .content-inner .social-media .twitter {
+  background-color: #55ACEE;
+}
+
+footer .content-inner .social-media .instagram {
+  background: -webkit-gradient(linear, left bottom, right top, from(#ffeb00), color-stop(#FD5949), color-stop(#d624cb), to(#0007ff));
+  background: linear-gradient(to top right, #ffeb00, #FD5949, #d624cb, #0007ff);
+}
+
+footer .content-inner .social-media .pinterest {
+  background-color: #CB2027;
+}
+
+footer .content-inner .social-media .telephone {
+  background-color: #999999;
+}
+
+footer .content-inner .social-media .email {
+  background-color: #539044;
+}
+
+footer .content-inner .copyright {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
