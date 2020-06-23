@@ -144,10 +144,10 @@ section a {
 }
 
 header {
-  position: fixed;
   width: 100%;
   z-index: 20;
   padding: 10px 0;
+  background-color: #143455;
 }
 
 @media screen and (min-width: 992px) {

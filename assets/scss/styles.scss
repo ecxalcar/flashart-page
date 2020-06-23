@@ -127,10 +127,11 @@ section {
 }
 
 header {
-	position: fixed;
+	// position: fixed;
 	width: 100%;
 	z-index: 20;
 	padding: 10px 0;
+	background-color: $dark-blue;
 
 	@include media(lg-min) {
 		padding: 20px 0;
