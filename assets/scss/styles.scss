@@ -2,6 +2,10 @@
 @import 'variables';
 @import 'media';
 
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -273,6 +277,10 @@ header {
 							color: $white;
 							transition: all 150ms ease-in-out;
 							text-decoration: none;
+
+							&:hover {
+								text-decoration: underline;
+							}
 
 							@include media(lg-min) {
 								padding: 20px 0;

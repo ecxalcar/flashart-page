@@ -4,6 +4,10 @@
   font-weight: 400;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -287,6 +291,10 @@ header .wrapper .bg-nav .container ul li a {
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   text-decoration: none;
+}
+
+header .wrapper .bg-nav .container ul li a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 992px) {
