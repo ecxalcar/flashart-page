@@ -304,12 +304,12 @@ header .wrapper .bg-nav .container ul li a:hover {
   }
 }
 
-.hero-page {
+#hero-page {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.hero-page .single-item .hero-slide {
+#hero-page .single-item .hero-slide {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,20 +318,20 @@ header .wrapper .bg-nav .container ul li a:hover {
 }
 
 @media screen and (min-width: 992px) {
-  .hero-page .single-item .hero-slide {
+  #hero-page .single-item .hero-slide {
     height: auto;
     min-height: 800px;
   }
 }
 
-.hero-page .single-item .hero-slide .overlay {
+#hero-page .single-item .hero-slide .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.hero-page .single-item .hero-slide .container {
+#hero-page .single-item .hero-slide .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,14 +339,14 @@ header .wrapper .bg-nav .container ul li a:hover {
       align-self: flex-end;
 }
 
-.hero-page .single-item .hero-slide .container .wrapper {
+#hero-page .single-item .hero-slide .container .wrapper {
   width: 100%;
   z-index: 4;
   position: relative;
   margin-bottom: 120px;
 }
 
-.hero-page .single-item .hero-slide .container .wrapper h1, .hero-page .single-item .hero-slide .container .wrapper p {
+#hero-page .single-item .hero-slide .container .wrapper h1, #hero-page .single-item .hero-slide .container .wrapper p {
   color: #fff;
 }
 
