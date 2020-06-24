@@ -11,12 +11,11 @@ $(document).ready(function(){
 		arrows: false,
 		dots: true,
 		infinite: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 2000,
 	});
 
 	$('body').flipLightBox({
-			
 		lightbox_text_status: 0,
 		lightbox_navigation_status: 0
 	});
