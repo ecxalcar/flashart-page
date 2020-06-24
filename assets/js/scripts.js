@@ -19,6 +19,5 @@ $(document).ready(function(){
 			
 		lightbox_text_status: 0,
 		lightbox_navigation_status: 0
-		
 	});
 });
